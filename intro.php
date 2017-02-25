@@ -17,6 +17,6 @@ $object->names = ["Ilyass", "Maria", "Luciano"];
 // Print each name (iteration over object property)
 foreach ($object->names as $name) {
 
-	echo $name . '<br>';
+	echo $name;
 
 }
