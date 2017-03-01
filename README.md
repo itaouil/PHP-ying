@@ -9,12 +9,12 @@ Basic PHP programs illustrating OOP concepts:
 
   1. Objects
   2. Classes
-    ⋅⋅* Constructor
-    ⋅⋅* Inheritance 
-    ⋅⋅* Visibility
-    ⋅⋅* Magic Methods
-    ⋅⋅* Abstract Classes
-    ..* Static
+  ⋅⋅* Constructor
+  ⋅⋅* Inheritance 
+  ⋅⋅* Visibility
+  ⋅⋅* Magic Methods
+  ⋅⋅* Abstract Classes
+  ..* Static
   3. Interfaces
   4. Dependency Injection
   5. Method Chaining
