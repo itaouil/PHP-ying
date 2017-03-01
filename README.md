@@ -7,18 +7,18 @@ The repository makes use of branches to distinguish between the projects, below 
 
 Basic PHP programs illustrating OOP concepts:
 
-  1. Objects
-  2. Classes
-  ⋅⋅* Constructor
-  ⋅⋅* Inheritance 
-  ⋅⋅* Visibility
-  ⋅⋅* Magic Methods
-  ⋅⋅* Abstract Classes
-  ..* Static
-  3. Interfaces
-  4. Dependency Injection
-  5. Method Chaining
-  6. Autoloading (automcatically load into the program the classes needed)
+1. Objects
+2. Classes
+..* Constructor
+..* Inheritance 
+..* Visibility
+..* Magic Methods
+..* Abstract Classes
+..* Static
+3. Interfaces
+4. Dependency Injection
+5. Method Chaining
+6. Autoloading (automcatically load into the program the classes needed)
 
 ### PHP Todo List
 
