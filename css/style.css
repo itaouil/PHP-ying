@@ -1,0 +1,98 @@
+/* General */
+body {
+    /* Set background color to light grey */
+    background-color: #eceff0;
+}
+
+body, input {
+    /* Font size (relative size) */
+    font-size: 1em;
+
+    /* Font family set to Open Sans and sans serif fallback */
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    /* Remove text decoration */
+    text-decoration: none;
+
+    /* Create bottom border for anchor tags */
+    border-bottom: 1px dashed #363639;
+}
+
+/* List */
+.list {
+    /* Set max width and center content (margin trick) */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+
+    /* Set padding and change box model */
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Curved corners and shadow around container */
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
+
+    /* White background color */
+    background-color: #ffffff;
+}
+
+.list .header {
+    /* Set font to Shadows Into Light 2 */
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+/* Items */
+.items {
+    /* Re-position list elements and get rid off of the list decoration */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.items li,
+.item-add .input {
+    /* Get rid off rounded corners and add dashed border bottom */
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+
+    /* Add space between list elements */
+    padding: 15px 0;
+}
+
+.items .item.done {
+    /* Put line through text (when marked as done) */
+    text-decoration: line-through;
+}
+
+.items li:hover .done-button {
+    opacity: 1;
+}
+
+.input {
+    width: 100%;
+}
+
+/* Done Button */
+.items .done-button {
+    border: 0;
+    opacity: 0.4;
+    color: #363639;
+    font-size: .8em;
+    padding: 3px 6px;
+    display: inline-block;
+    background-color: #d9dfe1;
+}
+
+/* Submit button */
+.submit {
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 3px 3px 0 #ddd;
+}
+
