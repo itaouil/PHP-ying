@@ -5,9 +5,9 @@ require_once "app/init.php";
 
 // Create prepared statement
 $itemsQuery = $db->prepare("
-    SELECT ID, NAME, DONE
-    FROM ITEM
-    WHERE USER = :USER
+    SELECT id, name, done
+    FROM item
+    WHERE user = :user
 ");
 
 // Execute prepared statement
@@ -16,7 +16,7 @@ $itemsQuery->execute([
 ]);
 
 // Store result of prepared statement
-$itemS = $itemsQuery->rowCount() ? $itemsQuery : [];
+$items = $itemsQuery->rowCount() ? $itemsQuery : [];
 
 ?>
 
@@ -52,12 +52,12 @@ $itemS = $itemsQuery->rowCount() ? $itemsQuery : [];
       <ul class="items">
 
         <?php foreach($items as $item): ?>
-        <li>
-          <span class="item<?php echo $item["name"] ? ' done' : '' ?>"><?php echo $item["name"]; ?></span>
-          <?php if(!$item["done"]): ?>
-            <a href="app/mark.php?as=done&item=<?php $item["id"]; ?>" class="done-button">mark as done</a>
-          <?php endif; ?>
-        </li>
+          <li>
+            <span class="item<?php echo $item["done"] ? ' done' : '' ?>"><?php echo $item["name"]; ?></span>
+            <?php if(!$item["done"]): ?>
+              <a href="app/mark.php?as=done&item=<?php echo $item["id"]; ?>" class="done-button">mark as done</a>
+            <?php endif; ?>
+          </li>
         <?php endforeach; ?>
 
       </ul>

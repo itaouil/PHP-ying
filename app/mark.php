@@ -14,14 +14,14 @@ if(isset($_GET["as"], $_GET["item"])) {
       case "done":
         // Prepared Statement
         $doneQuery = $db->prepare("
-            UPDATE ITEM
-            SET DONE = 1
-            WHERE ID = :ITEM
-            AND USER = :USER
+            UPDATE item
+            SET done = 1
+            WHERE id = :item
+            AND user = :user
         ");
 
         // Execute prepared statement
-        $doneQuery->execute(["id"=>$id, "user"=>$_SESSION["user_id"]);
+        $doneQuery->execute(["id"=>$item, "user"=>$_SESSION["user_id"]);
       break;
     }
 }

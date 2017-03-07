@@ -12,7 +12,7 @@ if(isset $_POST["name"]) {
 
         // Prepared Statement
         $addedQuery = $db->prepare("
-            INSERT INTO ITEM (NAME, USER, DONE)
+            INSERT INTO item (name, user, done)
             VALUES (:name, :user, 0);
         ");
 
