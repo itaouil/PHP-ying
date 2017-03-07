@@ -1,7 +1,6 @@
 # PHP(ying)
 
-A repository where I play around with PHP (inspired by Alex Garrett: Codecourse) by building simple apps, learning new frameworks, etc.
-The repository makes use of branches to distinguish between the projects, below is the branch-project mapping:
+A repo where I play around with PHP's basics as well as its interesting frameworks by revisiting important CS concepts and bulding small apps and interestings projects.
 
 ### OOP with PHP
 
