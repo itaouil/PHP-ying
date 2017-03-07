@@ -1,5 +1,28 @@
+<?php
+
+// Load init.php (connection to DB)
+require_once "app/init.php";
+
+// Create prepared statement
+$itemsQuery = $db->prepare("
+    SELECT ID, NAME, DONE
+    FROM ITEM
+    WHERE USER = :USER
+");
+
+// Execute prepared statement
+$itemsQuery->execute([
+    "user"=>$_SESSION["user_id"]
+]);
+
+// Store result of prepared statement
+$itemS = $itemsQuery->rowCount() ? $itemsQuery : [];
+
+?>
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
 
@@ -24,24 +47,28 @@
       <!-- App Title -->
       <h1 class="header">To Do</h1>
 
+      <?php if(!empty($items)): ?>
       <!-- Unordered List (Things to do) -->
       <ul class="items">
 
+        <?php foreach($items as $item): ?>
         <li>
-          <span class="item">Finish Raspy Project</span>
-          <a href="#" class="done-button">mark as done</a>
+          <span class="item<?php echo $item["name"] ? ' done' : '' ?>"><?php echo $item["name"]; ?></span>
+          <?php if(!$item["done"]): ?>
+            <a href="app/mark.php?as=done&item=<?php $item["id"]; ?>" class="done-button">mark as done</a>
+          <?php endif; ?>
         </li>
-
-        <li>
-          <span class="item done">Finish Leitstelle PC</span>
-        </li>
+        <?php endforeach; ?>
 
       </ul>
+      <?php else: ?>
+        <p>You haven't got any items</p>
+      <?php endif; ?>
 
       <!-- Form to submit to do -->
-      <form class="item-add" action="add.php" method="post">
+      <form class="item-add" action="app/add.php" method="post">
 
-        <input type="text" name="name" placeholder="Type new commitment." class="input" autocomplete="off" required>
+        <input type="text" name="name" placeholder="Type here." class="input" autocomplete="off" required>
         <input type="submit" value="Add" class="submit">
 
       </form>
