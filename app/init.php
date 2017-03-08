@@ -7,11 +7,11 @@ session_start();
 $_SESSION["user_id"] = 1;
 
 // Connect to Database
-$db = new PDO('mysql:dbname=todo;host=localhost', 'root', 'root');
+$db = new PDO("sqlite:/home/control-center/workspaces/PHP-ying/database");
 
 // Handle unsigned user
 if(!isset($_SESSION["user_id"])) {
-    die("You are not signed in !")
+    die("You are not signed in !");
 }
 
 ?>
