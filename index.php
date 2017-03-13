@@ -4,7 +4,15 @@
 require_once "app/init.php";
 
 // Fetch articles from database
-$query = $db->query("SELECT * FROM article");
+$query = $db->query("
+
+    SELECT article.id, article.title, AVG(articleRating.rating) AS rating
+    FROM article
+    LEFT JOIN articleRating
+    ON article.id = articleRating.title
+    GROUP BY article.id
+
+");
 
 $articles = [];
 
@@ -35,7 +43,7 @@ while($row = $query->fetchObject()) {
       </div>
 
       <div class="article-rating">
-        Rating x/5
+        Rating: <?php echo round($article->rating); ?> / 5
       </div>
     <?php endforeach; ?>
 
