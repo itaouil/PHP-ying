@@ -29,4 +29,8 @@ The php files (for the Logic side) can be explained briefly as follows:
 - add.php:   Collects the data posted by the form ($_POST universal variable used for the purpose) in index.php and stores them in the database by executing a prepared statement.
 - mark.php:  Updates the "done" column when the anchor tag's href is fired ($_GET universal variable used for the purpose). 
 
+### PHP Rating System App
 
+This was a simple project on the same wavelenght of the PHP Todo List, where I played again with database connection, page redirection
+and how to organise the workflow in the backend. No styling was added as the main purpose was gaining experience in using PHP as the 
+server language.
