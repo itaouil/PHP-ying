@@ -17,7 +17,7 @@ Basic PHP programs illustrating OOP concepts:
 3. Interfaces
 4. Dependency Injection
 5. Method Chaining
-6. Autoloading (automcatically load into the program the classes needed)
+6. Autoloading (automate loading process)
 
 ### PHP Todo List
 
