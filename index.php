@@ -23,7 +23,7 @@
       </div>
 
       <!-- Contact form -->
-      <form action="#" method="post">
+      <form action="app/contact.php" method="post">
 
         <!-- Name Input -->
         <label>
