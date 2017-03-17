@@ -34,3 +34,8 @@ The php files (for the Logic side) can be explained briefly as follows:
 This was a simple project on the same wavelenght of the PHP Todo List, where I played again with database connection, page redirection
 and how to organise the workflow in the backend. No styling was added as the main purpose was gaining experience in using PHP as the 
 server language.
+
+### PHP Contact Form
+
+A contact form whose back-end language is PHP. PHP has the merit in this small application to create the PHPMail instace, setting up the email,
+sending it to the recipient (only gmail handled in this case). The contact form has been integrated with validation and error visualisation in the markup.
