@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+// Get super globals values
+$fields = isset($_SESSION["fields"]) ? $_SESSION["fields"] : [];
+$errors = isset($_SESSION["errors"]) ? $_SESSION["errors"] : [];
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -17,10 +29,14 @@
 
     <div class="contact">
 
-      <!-- Validation Output -->
-      <div class="panel">
-        Errors will go here.
-      </div>
+      <?php if(!empty($errors)): ?>
+        <!-- Validation Output -->
+        <div class="panel">
+          <ul>
+            <li><?php echo implode("</li><li>", $errors); ?>
+          </ul>
+        </div>
+      <?php endif ?>
 
       <!-- Contact form -->
       <form action="app/contact.php" method="post">
